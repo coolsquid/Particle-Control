@@ -21,7 +21,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
-@Mod(modid = ParticleControl.MODID, name = ParticleControl.NAME, version = ParticleControl.VERSION, dependencies = ParticleControl.DEPENDENCIES, updateJSON = ParticleControl.UPDATE_JSON_URL)
+@Mod(modid = ParticleControl.MODID, name = ParticleControl.NAME, version = ParticleControl.VERSION, dependencies = ParticleControl.DEPENDENCIES, updateJSON = ParticleControl.UPDATE_JSON_URL, acceptableRemoteVersions = "*", clientSideOnly = true)
 public class ParticleControl {
 
 	public static final String MODID = "particlecontrol";
@@ -90,7 +90,7 @@ public class ParticleControl {
 			Minecraft.getMinecraft().effectRenderer.registerParticle(id, originalFactories.remove(id));
 		} else {
 			originalFactories.put(id, particleTypes.get(id));
-			Minecraft.getMinecraft().effectRenderer.registerParticle(id, (a, b, c, d, e, f, g, h, i) -> null);
+			Minecraft.getMinecraft().effectRenderer.registerParticle(id, null);
 		}
 		particles[id] = toggle;
 	}
