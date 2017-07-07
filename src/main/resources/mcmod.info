@@ -1,0 +1,13 @@
+[{
+  "modid": "particlecontrol",
+  "name": "Particle Control",
+  "description": "Allows you to disable particles by type.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://coolsquid.me",
+  "authorList": ["CoolSquid"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}]
